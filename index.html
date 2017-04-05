@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IFE:javascript 任务一：零基础JavaScript编码（一）</title>
+	</head>
+	<link rel="stylesheet" href="css/index.css">
+	<body>
+		<label>请输入北京今天空气质量:<input id="aqi-input" type="text"></label>
+		<button id="button">确认填写</button>
+		<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+	</body>
+	<script type="text/javascript">
+		(function(){
+			/*    
+			在注释下方写下代码
+			给按钮button绑定一个点击事件
+			在事件处理函数中
+			获取aqi-input输入的值，并显示在aqi-display中
+			*/
+			var confirm_button = document.getElementById("button");
+			var input_text = document.getElementById("aqi-input");
+			var display_text = document.getElementById("aqi-display");
+			confirm_button.onclick = function(){
+				display_text.innerHTML = input_text.value;
+				//input_text.value = "";//每次填写结束后清空输入框内的内容
+			}
+		})();
+	</script>
+</html>
